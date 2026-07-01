@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda - Stephany M. G. Uhlick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                🚀 Stephany M. G. Uhlick
+            </div>
+            <nav class="menu">
+                <button class="menu-btn active" onclick="switchTab('inicio')">🏠 Início</button>
+                <button class="menu-btn" onclick="switchTab('tarefas')">📋 Tarefas</button>
+                <button class="menu-btn" onclick="switchTab('configuracao')">⚙️ Configuração</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            
+            <section id="inicio" class="tab-content active">
+                <h2>👋 Bem-vindo! Este é meu primeiro Dashboard Web.</h2>
+                <h3>🚀 Minha Agenda Digital</h3>
+                
+                <div class="intro-box">
+                    <h4>Organize suas tarefas de forma inteligente</h4>
+                    <p>Este aplicativo foi desenvolvido utilizando HTML, CSS e JavaScript. O objetivo é criar uma ferramenta simples para cadastrar, acompanhar e organizar tarefas do dia a dia.</p>
+                    <ul>
+                        <li>✔️ Cadastro de tarefas</li>
+                        <li>✔️ Interface Dashboard</li>
+                        <li>✔️ Tema claro e escuro</li>
+                        <li>✔️ Armazenamento no navegador</li>
+                    </ul>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Learn" target="_blank" class="link-web">🌐 Aprender mais sobre desenvolvimento Web</a>
+                </div>
+
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Programação Web" class="feature-img">
+                    <p class="img-caption">Desenvolvido por Stephany M. G. Uhlick </p>
+                </div>
+            </section>
+
+            <section id="tarefas" class="tab-content">
+                <h2>📋 Minhas tarefas</h2>
+                <div class="task-input-container">
+                    <input type="text" id="task-input" placeholder="Digite uma tarefa...">
+                    <button onclick="addTask()" class="btn-primary">🚀 Adicionar tarefa</button>
+                </div>
+                <div class="task-counter">
+                    Total de tarefas: <span id="task-count">0</span>
+                </div>
+                <ul id="task-list" class="task-list"></ul>
+            </section>
+
+            <section id="configuracao" class="tab-content">
+                <h2>⚙️ Configuração</h2>
+                <div class="config-group">
+                    <label for="theme-select">Tema:</label>
+                    <select id="theme-select" onchange="changeTheme()">
+                        <option value="dark">Escuro</option>
+                        <option value="light">Claro</option>
+                    </select>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
